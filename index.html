@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #f9fafb;
+      --bg-dark: #1f2937;
+      --text-light: #f3f4f6;
+      --text-dark: #111827;
+      --primary: #2563eb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    header {
+      background: #1f2937;
+      color: var(--text-light);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem;
+      background: #374151;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem 5%;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #1f2937;
+      color: var(--text-light);
+      text-align: center;
+      padding: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Your Name</h1>
+    <p>Graphic Designer | Social Media Manager | Customer Service Specialist</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate creative professional with expertise in graphic design, social media management, and customer service. I bring ideas to life visually while ensuring exceptional client interaction and community engagement.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/600x300" alt="Project 1">
+        <h3>Graphic Design: Brand Kit for ABC Corp</h3>
+        <p>Created a full visual identity including logos, typography, and social media templates.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/600x300" alt="Project 2">
+        <h3>Social Media Campaign: Summer Sale</h3>
+        <p>Managed and executed a 2-month campaign for a fashion brand increasing engagement by 40%.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/600x300" alt="Project 3">
+        <h3>Customer Service: CRM Workflow Setup</h3>
+        <p>Streamlined customer response process, reducing average handling time by 30%.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Graphic Designer</strong> – Freelance (2020–Present)</li>
+        <li><strong>Social Media Manager</strong> – XYZ Brand (2021–2024)</li>
+        <li><strong>Customer Service Rep</strong> – ABC Company (2018–2021)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: your.email@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <a class="btn" href="mailto:your.email@example.com">Send Me a Message</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
